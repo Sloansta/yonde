@@ -1,10 +1,15 @@
+import { useState } from 'react';
+import FileSelect from './components/FileSelect';
 
 
 function App() {
+  const [fileSelected, setFileSelected] = useState(false);
   return (
-    <h1 className='text-3xl font-bold underline'>
-      Hello World!
-    </h1>
+    <div>
+      {!fileSelected && ( 
+        <FileSelect />
+      )}
+    </div>
   );
 }
 
